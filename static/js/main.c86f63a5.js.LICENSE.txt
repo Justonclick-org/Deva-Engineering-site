@@ -55,13 +55,6 @@
 
 /*!
  * Deva Bio Engineering Private Limited — Corporate Website
- * File: src/pages/ImageCredits.js — photograph attribution (CC licence compliance)
- * Author: Justonclick Team (https://justonclick.in)
- * Copyright (c) Justonclick. All rights reserved.
- */
-
-/*!
- * Deva Bio Engineering Private Limited — Corporate Website
  * File: src/pages/Industries.js — industries we serve
  * Author: Justonclick Team (https://justonclick.in)
  * Copyright (c) Justonclick. All rights reserved.
