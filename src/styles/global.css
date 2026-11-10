@@ -1,0 +1,278 @@
+/*!
+ * Deva Bio Engineering Private Limited — Corporate Website
+ * File: src/styles/global.css — design tokens, base typography & motion system
+ * Author: Justonclick Team (https://justonclick.in)
+ * Copyright (c) Justonclick. All rights reserved.
+ *
+ * Motion system adapted from the Justonclick website (justonclick.in):
+ * scroll reveals with per-section variants, corner decorations, cursor glow,
+ * button shine and floating hero elements — re-themed for Deva Bio Engineering.
+ */
+
+:root {
+  /* Brand palette — forest, emerald, earth */
+  --dbe-forest-950: #04170f;
+  --dbe-forest-900: #072a1d;
+  --dbe-forest-800: #0b3a28;
+  --dbe-forest: #0f4a33;
+  --dbe-emerald: #13945f;
+  --dbe-emerald-bright: #22c07c;
+  --dbe-emerald-light: #e6f5ee;
+  --dbe-mint: #c8ecda;
+  --dbe-earth: #b9853f;
+  --dbe-earth-dark: #96682a;
+  --dbe-earth-light: #f8f0e3;
+  --dbe-sand: #efe6d6;
+
+  /* Neutrals */
+  --dbe-ink: #14211c;
+  --dbe-charcoal: #2b3632;
+  --dbe-body: #4d5b56;
+  --dbe-muted: #75827d;
+  --dbe-line: #e1e9e4;
+  --dbe-surface: #ffffff;
+  --dbe-surface-alt: #f5f8f5;
+  --dbe-surface-warm: #faf7f1;
+
+  --dbe-gradient: linear-gradient(135deg, var(--dbe-mint) 0%, var(--dbe-emerald) 45%, var(--dbe-earth) 100%);
+  --dbe-gradient-deep: linear-gradient(140deg, var(--dbe-forest-950) 0%, var(--dbe-forest-900) 45%, var(--dbe-forest) 100%);
+
+  --dbe-shadow-sm: 0 4px 18px rgba(15, 74, 51, 0.07);
+  --dbe-shadow-md: 0 18px 44px rgba(15, 74, 51, 0.13);
+  --dbe-shadow-lg: 0 30px 70px rgba(4, 23, 15, 0.22);
+  --dbe-radius: 18px;
+  --dbe-radius-lg: 26px;
+  --dbe-ease: cubic-bezier(0.22, 1, 0.36, 1);
+
+  --dbe-font-head: "Sora", "Segoe UI", system-ui, -apple-system, sans-serif;
+  --dbe-font-body: "Inter", "Segoe UI", system-ui, -apple-system, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: var(--dbe-font-body);
+  color: var(--dbe-body);
+  background: var(--dbe-surface);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--dbe-font-head);
+  color: var(--dbe-ink);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+a {
+  color: var(--dbe-emerald);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--dbe-forest);
+}
+
+img {
+  max-width: 100%;
+}
+
+::selection {
+  background: var(--dbe-mint);
+  color: var(--dbe-forest-900);
+}
+
+:focus-visible {
+  outline: 3px solid var(--dbe-emerald-bright);
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
+.dbe-skip {
+  position: absolute;
+  left: 1rem;
+  top: -60px;
+  z-index: 2000;
+  padding: 0.6rem 1rem;
+  border-radius: 10px;
+  background: var(--dbe-forest);
+  color: #fff;
+  font-weight: 600;
+  transition: top 0.2s ease;
+}
+
+.dbe-skip:focus {
+  top: 1rem;
+  color: #fff;
+}
+
+.dbe-num {
+  font-variant-numeric: tabular-nums;
+}
+
+/* ================================================================
+   Scroll reveal (from Justonclick motion system)
+   ================================================================ */
+.dbe-reveal {
+  opacity: 0;
+  transform: translateY(26px);
+  transition:
+    opacity 0.7s var(--dbe-ease),
+    transform 0.7s var(--dbe-ease);
+  will-change: opacity, transform;
+}
+
+.dbe-reveal.dbe-visible {
+  opacity: 1;
+  transform: none;
+}
+
+.dbe-reveal.dbe-rv-left { transform: translateX(-46px); }
+.dbe-reveal.dbe-rv-right { transform: translateX(46px); }
+.dbe-reveal.dbe-rv-zoom { transform: scale(0.92); }
+.dbe-reveal.dbe-rv-flip { transform: perspective(900px) rotateX(-16deg) translateY(28px); }
+.dbe-reveal.dbe-rv-tilt { transform: perspective(900px) rotateY(14deg) translateX(26px); }
+.dbe-reveal.dbe-rv-skew { transform: skewY(4deg) translateY(34px); }
+.dbe-reveal.dbe-rv-drop { transform: translateY(-30px); }
+.dbe-reveal.dbe-rv-spin { transform: rotate(-5deg) scale(0.93); }
+.dbe-reveal.dbe-rv-blur {
+  filter: blur(10px);
+  transform: translateY(18px);
+  transition:
+    opacity 0.8s ease,
+    filter 0.8s ease,
+    transform 0.8s var(--dbe-ease);
+}
+.dbe-reveal.dbe-rv-blur.dbe-visible { filter: blur(0); }
+.dbe-reveal.dbe-visible[class*="dbe-rv-"] { transform: none; }
+
+/* Prerendered HTML is shown without JS-driven reveals until hydration. */
+.dbe-no-reveal .dbe-reveal {
+  opacity: 1;
+  transform: none;
+  filter: none;
+}
+
+/* ================================================================
+   Corner decoration ("bubble") — restyled per component
+   ================================================================ */
+.dbe-bubble {
+  position: absolute;
+  top: -34px;
+  right: -34px;
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 30%, rgba(19, 148, 95, 0.22), rgba(19, 148, 95, 0.04) 70%);
+  pointer-events: none;
+  transition: transform 0.6s var(--dbe-ease), opacity 0.5s ease;
+}
+
+.dbe-bubble::before,
+.dbe-bubble::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+}
+
+.dbe-bubble::before {
+  inset: 22px;
+  border: 1px solid rgba(19, 148, 95, 0.3);
+}
+
+.dbe-bubble::after {
+  width: 14px;
+  height: 14px;
+  left: 6px;
+  bottom: 2px;
+  background: var(--dbe-earth);
+  opacity: 0.6;
+  animation: dbe-float-y 4.5s ease-in-out infinite;
+}
+
+.dbe-bubble-earth {
+  background: radial-gradient(circle at 30% 30%, rgba(185, 133, 63, 0.24), rgba(185, 133, 63, 0.05) 70%);
+}
+
+.dbe-bubble-earth::before { border-color: rgba(185, 133, 63, 0.32); }
+.dbe-bubble-earth::after { background: var(--dbe-emerald); }
+
+*:hover > .dbe-bubble {
+  transform: scale(1.35) rotate(18deg);
+}
+
+/* ================================================================
+   Keyframes
+   ================================================================ */
+@keyframes dbe-float-y {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-9px); }
+}
+
+@keyframes dbe-float {
+  0%, 100% { transform: translate3d(0, 0, 0) scale(1); }
+  50% { transform: translate3d(0, -24px, 0) scale(1.06); }
+}
+
+@keyframes dbe-pulse {
+  0%, 100% { box-shadow: 0 0 0 3px rgba(34, 192, 124, 0.22); }
+  50% { box-shadow: 0 0 0 8px rgba(34, 192, 124, 0.04); }
+}
+
+@keyframes dbe-shift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+@keyframes dbe-kenburns {
+  from { transform: scale(1.04) translate3d(0, 0, 0); }
+  to { transform: scale(1.14) translate3d(-1.5%, -1%, 0); }
+}
+
+/* gas moving along a pipe */
+@keyframes dbe-flow {
+  to { stroke-dashoffset: -40; }
+}
+
+@keyframes dbe-flow-x {
+  to { background-position: 40px 0; }
+}
+
+@keyframes dbe-flow-y {
+  to { background-position: 0 40px; }
+}
+
+@keyframes dbe-rise {
+  0% { transform: translateY(0) scale(0.6); opacity: 0; }
+  20% { opacity: 0.9; }
+  100% { transform: translateY(-120px) scale(1.1); opacity: 0; }
+}
+
+@keyframes dbe-marquee {
+  to { transform: translateX(-50%); }
+}
+
+@keyframes dbe-spin-slow {
+  to { transform: rotate(360deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .dbe-reveal,
+  .dbe-reveal[class*="dbe-rv-"] {
+    opacity: 1;
+    transform: none;
+    filter: none;
+    transition: none;
+  }
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+  }
+  *:hover > .dbe-bubble { transform: none; }
+}

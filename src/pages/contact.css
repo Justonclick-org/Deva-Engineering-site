@@ -1,0 +1,261 @@
+/*!
+ * Deva Bio Engineering Private Limited — Corporate Website
+ * File: src/pages/contact.css — contact page & enquiry form
+ * Author: Justonclick Team (https://justonclick.in)
+ * Copyright (c) Justonclick. All rights reserved.
+ */
+
+.dbe-contact-side {
+  position: sticky;
+  top: 100px;
+  display: grid;
+  gap: 0.9rem;
+}
+
+.dbe-channel {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.05rem 1.2rem;
+  border-radius: 18px;
+  background: #fff;
+  border: 1px solid var(--dbe-line);
+  color: var(--dbe-body);
+  transition: transform 0.35s var(--dbe-ease), border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+a.dbe-channel:hover {
+  transform: translateX(6px);
+  border-color: var(--dbe-emerald);
+  box-shadow: var(--dbe-shadow-sm);
+  color: var(--dbe-body);
+}
+
+.dbe-channel-icon {
+  flex: none;
+  width: 46px;
+  height: 46px;
+  border-radius: 14px;
+  display: grid;
+  place-items: center;
+  background: var(--dbe-emerald-light);
+  color: var(--dbe-emerald);
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+a.dbe-channel:hover .dbe-channel-icon { background: var(--dbe-emerald); color: #fff; }
+
+.dbe-channel small,
+.dbe-location small {
+  display: block;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--dbe-muted);
+}
+
+.dbe-channel strong,
+.dbe-location strong {
+  display: block;
+  font-weight: 600;
+  color: var(--dbe-ink);
+  word-break: break-word;
+}
+
+.dbe-location {
+  border-radius: 20px;
+  overflow: hidden;
+  background: #fff;
+  border: 1px solid var(--dbe-line);
+}
+
+.dbe-location-map {
+  position: relative;
+  height: 150px;
+  background:
+    linear-gradient(rgba(19, 148, 95, 0.08) 1px, transparent 1px) 0 0 / 22px 22px,
+    linear-gradient(90deg, rgba(19, 148, 95, 0.08) 1px, transparent 1px) 0 0 / 22px 22px,
+    radial-gradient(circle at 50% 55%, var(--dbe-emerald-light), var(--dbe-surface-alt) 70%);
+  display: grid;
+  place-items: center;
+}
+
+.dbe-location-pin {
+  position: relative;
+  z-index: 1;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: var(--dbe-forest);
+  color: #fff;
+  animation: dbe-float-y 3s ease-in-out infinite;
+}
+
+.dbe-location-ring {
+  position: absolute;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  border: 2px solid rgba(19, 148, 95, 0.35);
+  animation: dbe-ping 2.4s ease-out infinite;
+}
+
+@keyframes dbe-ping {
+  from { transform: scale(0.5); opacity: 1; }
+  to { transform: scale(1.6); opacity: 0; }
+}
+
+.dbe-location-body { padding: 1rem 1.2rem 1.2rem; display: grid; gap: 0.35rem; }
+.dbe-location-body .dbe-link-arrow { font-size: 0.88rem; }
+
+.dbe-contact-note {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0.3rem 0 0;
+  font-size: 0.86rem;
+  color: var(--dbe-muted);
+}
+
+/* form */
+.dbe-form {
+  padding: clamp(1.4rem, 4vw, 2.6rem);
+  border-radius: 28px;
+  background: #fff;
+  border: 1px solid var(--dbe-line);
+  box-shadow: var(--dbe-shadow-md);
+}
+
+.dbe-form h2 { font-size: 1.6rem; margin-bottom: 0.3rem; }
+.dbe-form-intro { font-size: 0.88rem; color: var(--dbe-muted); margin-bottom: 1.6rem; }
+
+.dbe-form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.1rem 1.2rem;
+}
+
+.dbe-field-wide { grid-column: 1 / -1; }
+
+.dbe-field { display: grid; gap: 0.4rem; margin: 0; }
+
+.dbe-field > span {
+  font-size: 0.86rem;
+  font-weight: 600;
+  color: var(--dbe-charcoal);
+}
+
+.dbe-field input,
+.dbe-field select,
+.dbe-field textarea {
+  width: 100%;
+  padding: 0.8rem 0.95rem;
+  border-radius: 12px;
+  border: 1px solid #cfdad4;
+  background: var(--dbe-surface-alt);
+  color: var(--dbe-ink);
+  font: inherit;
+  font-size: 0.95rem;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+}
+
+.dbe-field textarea { resize: vertical; min-height: 120px; }
+
+.dbe-field input:focus,
+.dbe-field select:focus,
+.dbe-field textarea:focus {
+  outline: none;
+  border-color: var(--dbe-emerald);
+  background: #fff;
+  box-shadow: 0 0 0 4px rgba(19, 148, 95, 0.14);
+}
+
+.dbe-field input:user-invalid,
+.dbe-field select:user-invalid {
+  border-color: #c2412d;
+}
+
+.dbe-radio-row { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+
+.dbe-radio {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.55rem 0.9rem;
+  border-radius: 999px;
+  border: 1px solid #cfdad4;
+  background: var(--dbe-surface-alt);
+  font-size: 0.86rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.25s ease, border-color 0.25s ease, color 0.25s ease;
+}
+
+.dbe-radio input { accent-color: var(--dbe-emerald); }
+.dbe-radio.is-on { background: var(--dbe-emerald-light); border-color: var(--dbe-emerald); color: var(--dbe-forest); }
+
+.dbe-check {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.dbe-check input { margin-top: 0.25rem; accent-color: var(--dbe-emerald); width: 18px; height: 18px; flex: none; }
+
+.dbe-hp {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.dbe-form-msg {
+  display: flex;
+  gap: 0.6rem;
+  align-items: flex-start;
+  margin: 1.2rem 0 0;
+  padding: 0.9rem 1.1rem;
+  border-radius: 14px;
+  font-size: 0.92rem;
+  line-height: 1.6;
+}
+
+.dbe-form-msg svg { flex: none; margin-top: 2px; }
+.dbe-form-msg.is-success { background: var(--dbe-emerald-light); color: var(--dbe-forest); }
+.dbe-form-msg.is-error { background: #fdecea; color: #8a2a1b; }
+
+@media (max-width: 991.98px) {
+  .dbe-contact-side { position: static; }
+}
+
+@media (max-width: 575.98px) {
+  .dbe-form-grid { grid-template-columns: 1fr; }
+}
+
+fieldset.dbe-field { border: 0; padding: 0; min-width: 0; }
+
+fieldset.dbe-field > legend {
+  float: none;
+  width: auto;
+  margin: 0 0 0.4rem;
+  padding: 0;
+  font-size: 0.86rem;
+  font-weight: 600;
+  color: var(--dbe-charcoal);
+}
+
+/* radios inside the capacity fieldset must not inherit the text-input sizing */
+.dbe-field .dbe-radio input {
+  width: auto;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  background: none;
+  box-shadow: none;
+}
