@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/static/css/main.82036c5c.css",
+    "main.js": "/static/js/main.4b6d275e.js",
+    "static/media/biogas-plant-aerial.webp": "/static/media/biogas-plant-aerial.5a5f23d49cf89154cd77.webp",
+    "static/media/digester-farmland.webp": "/static/media/digester-farmland.fe22c02671a377172c6d.webp",
+    "static/media/napier-grass.webp": "/static/media/napier-grass.17f735c9214f87030f62.webp",
+    "static/media/anaerobic-digesters.webp": "/static/media/anaerobic-digesters.36796116962c8a18c569.webp",
+    "static/media/biogas-upgrading-unit.webp": "/static/media/biogas-upgrading-unit.9ab2274555622ec06808.webp",
+    "static/media/reciprocating-compressor.webp": "/static/media/reciprocating-compressor.41093b95e87555268c64.webp",
+    "static/media/digester-renewables.webp": "/static/media/digester-renewables.ca4d1bd384bb49c347c7.webp",
+    "index.html": "/index.html",
+    "main.82036c5c.css.map": "/static/css/main.82036c5c.css.map",
+    "main.4b6d275e.js.map": "/static/js/main.4b6d275e.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.82036c5c.css",
+    "static/js/main.4b6d275e.js"
+  ]
+}

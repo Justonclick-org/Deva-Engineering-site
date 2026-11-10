@@ -1,0 +1,5 @@
+# Deva Bio Engineering — robots.txt
+User-agent: *
+Allow: /
+
+Sitemap: https://devabioengineering.in/sitemap.xml

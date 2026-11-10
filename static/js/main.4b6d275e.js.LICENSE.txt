@@ -1,0 +1,160 @@
+/*!
+	Copyright (c) 2018 Jed Watson.
+	Licensed under the MIT License (MIT), see
+	http://jedwatson.github.io/classnames
+*/
+
+/*!
+ * Deva Bio Engineering Private Limited — Corporate Website
+ * File: src/App.js — routes
+ * Author: Justonclick Team (https://justonclick.in)
+ * Copyright (c) Justonclick. All rights reserved.
+ */
+
+/*!
+ * Deva Bio Engineering Private Limited — Corporate Website
+ * File: src/components/brand/Logo.js — brand mark & wordmark
+ * Author: Justonclick Team (https://justonclick.in)
+ * Copyright (c) Justonclick. All rights reserved.
+ *
+ * Mark: a hexagon (the molecular motif of gas engineering) enclosing a biomass
+ * drop-leaf with a flame at its heart — organic matter becoming energy — with two
+ * rising gas bubbles. Keep public/logo.svg and public/favicon.svg in sync with this.
+ */
+
+/*!
+ * Deva Bio Engineering Private Limited — Corporate Website
+ * File: src/components/diagrams/PlantSchematic.js — Napier-to-CBG plant block diagram
+ * Author: Justonclick Team (https://justonclick.in)
+ * Copyright (c) Justonclick. All rights reserved.
+ *
+ * Schematic only: shows process sequence and design values from the DPR. It is not a
+ * plot layout, P&ID or equipment arrangement drawing.
+ */
+
+/*!
+ * Deva Bio Engineering Private Limited — Corporate Website
+ * File: src/components/layout/Layout.js — page shell, scroll restore & floating actions
+ * Author: Justonclick Team (https://justonclick.in)
+ * Copyright (c) Justonclick. All rights reserved.
+ */
+
+/*!
+ * Deva Bio Engineering Private Limited — Corporate Website
+ * File: src/data/industries.js — industries & feedstock opportunities
+ * Author: Justonclick Team (https://justonclick.in)
+ * Copyright (c) Justonclick. All rights reserved.
+ */
+
+/*!
+ * Deva Bio Engineering Private Limited — Corporate Website
+ * File: src/hooks/useCardGlow.js — cursor-following card glow (Justonclick motion system)
+ * Author: Justonclick Team (https://justonclick.in)
+ * Copyright (c) Justonclick. All rights reserved.
+ */
+
+/*!
+ * Deva Bio Engineering Private Limited — Corporate Website
+ * File: src/pages/ImageCredits.js — photograph attribution (CC licence compliance)
+ * Author: Justonclick Team (https://justonclick.in)
+ * Copyright (c) Justonclick. All rights reserved.
+ */
+
+/*!
+ * Deva Bio Engineering Private Limited — Corporate Website
+ * File: src/pages/Industries.js — industries we serve
+ * Author: Justonclick Team (https://justonclick.in)
+ * Copyright (c) Justonclick. All rights reserved.
+ */
+
+/*!
+ * Deva Bio Engineering Private Limited — Corporate Website
+ * File: src/pages/NotFound.js — 404 page
+ * Author: Justonclick Team (https://justonclick.in)
+ * Copyright (c) Justonclick. All rights reserved.
+ */
+
+/*!
+ * Deva Bio Engineering Private Limited — Corporate Website
+ * File: src/pages/Projects.js — project portfolio
+ * Author: Justonclick Team (https://justonclick.in)
+ * Copyright (c) Justonclick. All rights reserved.
+ */
+
+/*!
+ * Deva Bio Engineering Private Limited — Corporate Website
+ * File: src/pages/SolutionDetail.js — individual solution page
+ * Author: Justonclick Team (https://justonclick.in)
+ * Copyright (c) Justonclick. All rights reserved.
+ */
+
+/*!
+ * Deva Bio Engineering Private Limited — Corporate Website
+ * File: src/pages/Solutions.js — solutions overview
+ * Author: Justonclick Team (https://justonclick.in)
+ * Copyright (c) Justonclick. All rights reserved.
+ */
+
+/*!
+ * Deva Bio Engineering Private Limited — Corporate Website
+ * File: src/pages/Technology.js — technology & process
+ * Author: Justonclick Team (https://justonclick.in)
+ * Copyright (c) Justonclick. All rights reserved.
+ */
+
+/**
+ * @license React
+ * react-dom-client.production.js
+ *
+ * Copyright (c) Meta Platforms, Inc. and affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+/**
+ * @license React
+ * react-dom.production.js
+ *
+ * Copyright (c) Meta Platforms, Inc. and affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+/**
+ * @license React
+ * react-jsx-runtime.production.js
+ *
+ * Copyright (c) Meta Platforms, Inc. and affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+/**
+ * @license React
+ * react.production.js
+ *
+ * Copyright (c) Meta Platforms, Inc. and affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+/**
+ * @license React
+ * scheduler.production.js
+ *
+ * Copyright (c) Meta Platforms, Inc. and affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+/**
+ * @license lucide-react v1.71.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */
