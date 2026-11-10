@@ -43,7 +43,7 @@ function startServer() {
     res.writeHead(200, { "Content-Type": TYPES[path.extname(target)] || "application/octet-stream" });
     fs.createReadStream(target).pipe(res);
   });
-  return new Promise((resolve) => server.listen(0, () => resolve(server)));
+  return new Promise((resolve) => server.listen(0, "127.0.0.1", () => resolve(server)));
 }
 
 function outputFiles(route) {
@@ -55,10 +55,13 @@ function outputFiles(route) {
 
 async function main() {
   const server = await startServer();
-  const origin = `http://localhost:${server.address().port}`;
+  const origin = `http://127.0.0.1:${server.address().port}`;
   let browser;
   try {
-    browser = await puppeteer.launch();
+    browser = await puppeteer.launch({
+      headless: "new",
+      args: ["--no-sandbox", "--disable-setuid-sandbox", "--disable-dev-shm-usage"],
+    });
   } catch (err) {
     console.error("Could not start Chrome for prerendering. Run `npx puppeteer browsers install chrome` once, then build again.");
     throw err;
@@ -83,7 +86,7 @@ async function main() {
 
   while (queue.length) {
     const route = queue.shift();
-    await page.goto(origin + route, { waitUntil: "networkidle0", timeout: 60000 });
+    await page.goto(origin + route, { waitUntil: "domcontentloaded", timeout: 30000 });
     await page.waitForSelector("main");
     await new Promise((r) => setTimeout(r, 250));
 
@@ -135,6 +138,9 @@ async function main() {
     `# Deva Bio Engineering — robots.txt\nUser-agent: *\nAllow: /\n\nSitemap: ${SITE_URL}/sitemap.xml\n`
   );
   console.log(`sitemap.xml written with ${indexable.length} URLs; robots.txt written`);
+
+  if (browser) await browser.close();
+  server.close();
 
   if (errors.length) {
     console.error("\nBrowser errors during prerender:\n" + [...new Set(errors)].join("\n"));

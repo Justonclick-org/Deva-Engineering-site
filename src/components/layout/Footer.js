@@ -100,8 +100,7 @@ function Footer() {
 
         <p className="dbe-foot-note">
           The 5 TPD CBG plant at Shivni, Beed is a proposed project. Technical figures on this website are design
-          values subject to final engineering. Photographs are representative images of biogas infrastructure and do
-          not show Deva Bio Engineering installations — see <Link to="/image-credits">image credits</Link>.
+          values subject to final engineering.
         </p>
 
         <div className="dbe-foot-bottom">

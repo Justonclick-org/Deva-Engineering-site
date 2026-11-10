@@ -5,7 +5,7 @@
   "description": "Corporate website for Deva Bio Engineering Private Limited — biogas engineering and compressed biogas (CBG). Designed & developed by Justonclick Team. All rights reserved by Justonclick.",
   "author": "Justonclick Team <info@justonclick.in> (https://justonclick.in)",
   "license": "UNLICENSED",
-  "homepage": "https://devabioengineering.in",
+  "homepage": "/",
   "dependencies": {
     "bootstrap": "^5.3.8",
     "lucide-react": "^1.14.0",

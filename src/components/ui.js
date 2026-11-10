@@ -10,7 +10,6 @@ import { Container } from "reactstrap";
 import {
   ArrowRight,
   Building2,
-  Camera,
   CheckCircle2,
   CircleDot,
   Cloud,
@@ -75,8 +74,8 @@ export function SectionHeading({ eyebrow, title, sub, center, className = "", as
   );
 }
 
-/** Photo with a mandatory "representative image" caption — never implies it is a Deva site. */
-export function Photo({ photo, className = "", ratio = "4 / 3", eager, caption = true, linkCredit = true, sizes }) {
+/** Standard responsive photo component without third-party overlays. */
+export function Photo({ photo, className = "", ratio = "4 / 3", eager, sizes }) {
   const p = typeof photo === "string" ? PHOTOS[photo] : photo;
   if (!p) return null;
   return (
@@ -90,21 +89,6 @@ export function Photo({ photo, className = "", ratio = "4 / 3", eager, caption =
         decoding="async"
         sizes={sizes}
       />
-      {caption && (
-        <figcaption>
-          <span className="dbe-photo-tag">
-            <Camera size={12} aria-hidden="true" /> Representative image
-            {linkCredit && (
-              <>
-                {" · "}
-                <Link to="/image-credits" style={{ color: "inherit", pointerEvents: "auto", textDecoration: "underline" }}>
-                  credit
-                </Link>
-              </>
-            )}
-          </span>
-        </figcaption>
-      )}
     </figure>
   );
 }

@@ -207,10 +207,6 @@ function Home() {
             </Col>
           </Row>
         </Container>
-        <p className="dbe-hero-credit">
-          Representative image of an agricultural biogas plant ·{" "}
-          <Link to="/image-credits">credit</Link>
-        </p>
       </section>
 
       {/* Key design figures */}

@@ -17,7 +17,6 @@ import FlagshipProject from "./pages/FlagshipProject";
 import Industries from "./pages/Industries";
 import Sustainability from "./pages/Sustainability";
 import Contact from "./pages/Contact";
-import ImageCredits from "./pages/ImageCredits";
 import NotFound from "./pages/NotFound";
 import { FLAGSHIP } from "./data/flagship";
 
@@ -36,7 +35,6 @@ function App() {
           <Route path="industries" element={<Industries />} />
           <Route path="sustainability" element={<Sustainability />} />
           <Route path="contact" element={<Contact />} />
-          <Route path="image-credits" element={<ImageCredits />} />
           <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>

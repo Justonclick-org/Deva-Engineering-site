@@ -40,7 +40,7 @@ function Projects() {
                 <Link to={`/projects/${p.slug}`} className="dbe-project-card dbe-reveal dbe-rv-left" style={stagger(i)}>
                   <Row className="g-0 h-100">
                     <Col md={6}>
-                      <Photo photo={p.photo} ratio="auto" className="h-100" caption={p.representative} linkCredit={false} />
+                      <Photo photo={p.photo} ratio="auto" className="h-100" />
                     </Col>
                     <Col md={6}>
                       <div className="dbe-project-body">
